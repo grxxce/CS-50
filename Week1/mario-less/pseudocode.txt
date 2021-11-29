@@ -1,0 +1,7 @@
+Ask the user for input and save in var height 
+    loop in do-while until a valid number between 1 and 8 has been provided
+
+Create a loop that repeats the number of rows based on input height (ex. 8 loops for height = 8)
+    Create a second nested loop that prints "height - row - 1" spaces
+    Create a third loop on the same level as the previous that prints the "row number" of hashes
+    Print a new line at the end of the nested with

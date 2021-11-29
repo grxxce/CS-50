@@ -1,0 +1,10 @@
+vote
+
+    Loop through the number of names in the array
+    if the inputted string name matches a name in the array
+        increase candidates[i].votes +=1;
+    
+    return false
+
+Winner
+    

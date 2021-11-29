@@ -1,0 +1,41 @@
+Create Header files (CS 50, Standard, String)
+
+Create function prototypes
+
+Start Main
+    Ask the user to input their text with get_string
+        Save input string in var text
+    Pass text to functions
+        Calculate number of letters and save to var letters
+        Calc number of words and save to var words
+        Calc num of sentences and save to var sentences
+    Pass letters, words, and sentences to function calc grade
+    Print return value to screen
+
+Function to calc num letters
+    Create var letters and intialize to 0
+    For every char in length of text array
+        If input between A and Z or between a and z, letters ++
+    Print num letters
+    return int letters to main
+
+Function to calc num words
+    Create var characters and intialize to 1
+    For every char in length of text array
+        If char == space, chars ++
+    Print num words
+    return number of chars
+
+Function to calc num sentences
+    Create var sentences and intialize to 0
+    For every char in length of text array
+        if char == ! or . or ?
+        sentences ++
+    Print num sentences
+    return sentences
+
+Function to calculate reading grade (pass in letters, words, sentences)
+    Use index = 0.0588 * L - 0.296 * S - 15.8 to calculate reading index
+        If value greater than 16
+            Return 16+
+    Return as string value to main

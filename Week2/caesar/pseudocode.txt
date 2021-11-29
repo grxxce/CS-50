@@ -1,0 +1,37 @@
+Header Files
+Standard
+CS50
+String
+
+Method Prototypes
+string Ciphertext (int k, string plaintext)
+
+
+Main
+    Ask the user for a non-negative integer and save in var k
+    if k is no or multiple command line arguments
+        Print an error message
+        Return to main a value of 1
+    
+    else if k is non-integer value
+        Print Usage: ./caesar key
+        Return to main a value of 1
+
+    Ask user for "plaintext:  " with get_string and store in string plaintext
+    print "ciphertext: \n" call on method cipher and pass through argument plaintext
+    return 0
+
+Methods
+string Ciphertext (int k, string plaintext)
+    intialize string ciphertext = "";
+    For int i in stlen(plaintext)
+        If the char is a letter
+            int newLetter = (plaintext[i] + k)%26
+            ciphertext[i] = newLetter
+        else
+            ciphertext[i] = plaintext[i]
+    return ciphertext
+
+
+Edge Cases
+- Reminder that k should wrap around, so you should create an index for the alpha

@@ -1,0 +1,63 @@
+* {
+    background-color: #FAFBF9;
+}
+
+/* Start styling nav bar */
+#logo {
+    width: 10%;
+}
+/* End styling nav bar */
+
+/* Hero section styling */
+.site-hero .title-text.padding{
+    padding: 0% 0% 5% 0%;
+}
+
+.site-hero .hero-body.media img {
+    width: 80%;
+}
+
+.site-hero h4{
+    font-size: 20px;
+}
+
+.site-hero p{
+    font-style: italic;
+}
+
+.main .button {
+    border: none;
+    background: transparent;
+    padding: none;
+}
+
+/* End of hero section styling */
+
+/* Start of Projects */
+.main .project-area{
+    padding: 4rem 0;
+}
+
+/* Styling cards */
+.main .project-area .content-type button{
+    background: transparent;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    padding: 1.5rem 0;
+}
+
+.main .project-area .content-type button + button{
+    padding: 0rem 1.5rem;
+}
+
+.main .project-area .grid .content > .title h4 {
+    font: 400 12px;
+}
+
+.main .project-area .grid .content img {
+    width: 100%;
+}
+
+
+/* End of Projects */

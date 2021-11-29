@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // TODO: Add code to check answers to questions
+            // Define an element that, when clicked, will use this function
+
+            // Create a buffer that tells the page to wait for the whole page to load before this section
+
+            document.addEventListener('DOMContentLoaded', function() {
+
+                let correct = document.querySelector('.correct'); // Selects all elements with class correct
+                let incorrects = document.querySelectorAll('.incorrect'); // Selects all elements with class incorrect
+
+                for (let i = 0; i < incorrects.length; i++){
+                    incorrects[i].addEventListener("click", function() {
+                        incorrects[i].style.backgroundColor = "Red";
+                        incorrects[i].parentElement.querySelector('.feedback').innerHTML = 'Incorrect'; // Selects the text feature, where the inner HTML is what is in between the h tags
+                    });
+                }
+
+                // If correct, then turn green
+                correct.addEventListener("click", function() {
+                    correct.style.backgroundColor = "Green";
+                    correct.parentElement.querySelector('.feedback').innerHTML = 'Correct'; // Selects the text feature, where the inner HTML is what is in between the h tags
+                });
+
+                // Now, check the free response field
+                document.querySelector('#check').addEventListener('click', function() {
+                    // Find the input box
+                    let input = document.querySelector('input'); // because we only have one input tag, or else we would make this a class
+
+                    // Check the contents of the input box
+                    if (input.value == "Strongest"){
+                        // If correct, update contents of paragraph tag to correct and make input field green
+                        input.style.backgroundColor = "Green";
+                        input.parentElement.querySelector('.feedback').innerHTML = "Correct";
+                    }
+                    else {
+                        // If incorrect, update contents of the paragraph tag to incorrect and make input field red
+                        input.style.backgroundColor = "Red";
+                        input.parentElement.querySelector('.feedback').innerHTML = "Incorrect";
+                    }
+                })
+
+            });
+            
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+                <h3>What is your favorite type of coffee?</h3>
+                <button class="correct">Black</button>
+                <button class="incorrect">Flat White</button>
+                <button class="incorrect">Iced Caramel Macchiato</button>
+                <p class="feedback"></p>
+
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+                <h3>Why is this the best type of coffee?</h3>
+                <input type="text"></input>
+                <button id="check">Confirm Answer</button>  
+                <!-- Why do we use an id here instead of a class? -->
+                <p class="feedback"></p>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,24 @@
+sort1 uses: Bubble Sort
+
+How do you know?:
+I know this because Bubble sort should be the fastest on the pre-sorted list.
+Sort 1 had 0m0.644s, which was the shortest time by far.
+
+
+
+
+sort2 uses: Merge Sort
+
+How do you know?:
+It is the fastest when sorting the largest pile of randome numbers.
+Sort 2 only used 0m0.588s when sorting 50000 random numbers
+
+
+
+sort3 uses: Selection Sort
+
+How do you know?: 
+Selection sort should not have a difference between best and worst case:
+
+reversed50000: real    0m3.274s
+sorted50000: real    0m3.134s
